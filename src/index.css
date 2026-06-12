@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  margin: 0;
+}
+
+::selection {
+  background: #d98e5f;
+  color: #fff;
+}
+
+@keyframes mbFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Hover interactions (converted from the original style-hover attrs) ---- */
+.mb-btn-primary {
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.mb-btn-primary:hover {
+  background: #c87c4d;
+}
+
+.mb-cta-primary {
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.mb-cta-primary:hover {
+  background: #c87c4d;
+  transform: translateY(-2px);
+}
+
+.mb-cta-outline {
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.mb-cta-outline:hover {
+  border-color: #2d5a86;
+  transform: translateY(-2px);
+}
+
+.mb-cta-ghost {
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.mb-cta-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.mb-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.mb-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 50px -30px rgba(22, 41, 58, 0.4);
+}
+
+/* ---- Responsive nav ---- */
+@media (max-width: 860px) {
+  [data-desktop-nav] {
+    display: none !important;
+  }
+  [data-hamburger] {
+    display: flex !important;
+  }
+}
